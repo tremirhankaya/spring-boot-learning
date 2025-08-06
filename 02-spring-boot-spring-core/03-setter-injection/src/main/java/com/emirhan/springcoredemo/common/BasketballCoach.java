@@ -1,4 +1,4 @@
-package com.emirhan.springcoredemo;
+package com.emirhan.springcoredemo.common;
 
 import org.springframework.stereotype.Component;
 
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 public class BasketballCoach implements Coach {
 
     public String getDailyWorkout() {
-        return "Practice 3point shoot for 15 min!!!!";
+        return "Practice 3 point shoot for 15 min!!!!";
     }
 
 }
