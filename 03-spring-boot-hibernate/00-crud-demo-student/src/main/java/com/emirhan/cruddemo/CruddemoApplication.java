@@ -22,8 +22,18 @@ StudentDao studentDao;
 		//findStudent(studentDao);
 		//createStudent(studentDao);
 		//queryForStudents(studentDao);
-		findStudentByLastName(studentDao);
+		//findStudentByLastName(studentDao);
+		updateStudent(studentDao);
 	};
+	}
+
+	private void updateStudent(StudentDao studentDao) {
+		int studentId = 2;
+		Student theStudent= studentDao.findbyId(studentId);
+		System.out.println("Updating the student");
+		theStudent.setFirstName("Fener");
+		System.out.println("Updated student: "+theStudent.getFirstName());
+		studentDao.update(theStudent);
 	}
 
 	private void findStudentByLastName(StudentDao studentDao) {
