@@ -44,4 +44,12 @@ public class StudentDaoImpl implements StudentDao {
 
         return query.getResultList();
     }
+
+    @Override
+    public List<Student> findByLastName(String lastName) {
+        TypedQuery<Student> query = entityManager.createQuery(
+                "FROM Student WHERE lastName = :theLastName", Student.class);
+        query.setParameter("theLastName", lastName);
+        return query.getResultList();
+    }
 }

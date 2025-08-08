@@ -21,8 +21,17 @@ StudentDao studentDao;
 	return  runner ->{
 		//findStudent(studentDao);
 		//createStudent(studentDao);
-		queryForStudents(studentDao);
+		//queryForStudents(studentDao);
+		findStudentByLastName(studentDao);
 	};
+	}
+
+	private void findStudentByLastName(StudentDao studentDao) {
+		List<Student> resultlist=studentDao.findByLastName("Kaya");
+		for(Student student:resultlist){
+			System.out.println(student);
+		}
+
 	}
 
 	private void queryForStudents(StudentDao studentDao) {
