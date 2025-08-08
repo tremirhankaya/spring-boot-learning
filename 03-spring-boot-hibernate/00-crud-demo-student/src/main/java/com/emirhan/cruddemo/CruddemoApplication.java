@@ -23,8 +23,19 @@ StudentDao studentDao;
 		//createStudent(studentDao);
 		//queryForStudents(studentDao);
 		//findStudentByLastName(studentDao);
-		updateStudent(studentDao);
+		//updateStudent(studentDao);
+		queryForStudents(studentDao);
+		deleteStudent(studentDao);
+		queryForStudents(studentDao);
+		//queryForStudents(studentDao);
 	};
+	}
+
+	private void deleteStudent(StudentDao studentDao) {
+		int studentId=3;
+		System.out.println("Deleting the student by id:"+studentId);
+		studentDao.delete(studentId);
+		System.out.println("Deleted the student by id:"+studentId);
 	}
 
 	private void updateStudent(StudentDao studentDao) {
