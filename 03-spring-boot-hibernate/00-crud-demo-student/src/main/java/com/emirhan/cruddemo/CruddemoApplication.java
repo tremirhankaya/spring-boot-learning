@@ -17,14 +17,22 @@ StudentDao studentDao;
 	@Bean
 	public CommandLineRunner commandLineRunner(StudentDao studentDao){
 	return  runner ->{
-		createStudent(studentDao);
+		findStudent(studentDao);
+		//createStudent(studentDao);
 	};
+	}
+
+	private void findStudent(StudentDao studentDao) {
+		System.out.println("Reading the student information...");
+		Student myStudent=studentDao.findbyId(2);
+		System.out.println("Student Information :"+myStudent);
+
 	}
 
 	private void createStudent(StudentDao studentDao) {
 		//create the student object
 		System.out.println("Creating new student object...");
-		Student tempStudent= new Student("Emirhan","Kaya","tremirhankaya@gmail.com");
+		Student tempStudent= new Student("İnci","Uslu","inciuslu573@gmail.com");
 		//save the student object
 		System.out.println("Saving student object...");
 		studentDao.save(tempStudent);

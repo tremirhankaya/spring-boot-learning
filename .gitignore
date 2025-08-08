@@ -63,3 +63,4 @@ data/
 /.classpath
 /.settings/
 /bin/
+src/main/resources/application.properties
